@@ -24,6 +24,6 @@ click edit.
 5)When you are done you can logout.
 
 Errors can occur throughout the seller page.
-It is best to make quantity changes prior to existing products prior to adding a new product.
+It is best to make quantity changes to existing products prior to adding a new product.
 
 Errors can occur when deleting a product and trying to add more after.
