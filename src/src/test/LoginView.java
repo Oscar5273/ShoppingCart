@@ -54,12 +54,12 @@ private static void placeComponents(JPanel panel){
 		@Override
 		public void actionPerformed(ActionEvent e){
 			String [] x = new String[1];
-			if(userText.getText().equals("buyer12345") && checkPassword(passwordText.getPassword())==true){
+			if(userText.getText().equals("buyer1") && checkPassword(passwordText.getPassword())==true){
 			MainPage f=new MainPage();
 			x[0]="b";
 			f.main(x);
 			frame.dispose();}
-			else if(userText.getText().equals("seller12345") && checkPassword(passwordText.getPassword())==true){
+			else if(userText.getText().equals("seller1") && checkPassword(passwordText.getPassword())==true){
 			MainPage f=new MainPage();
 			x[0]="s";
 			f.main(x);
@@ -78,7 +78,7 @@ private static void placeComponents(JPanel panel){
  */
 public static boolean checkPassword(char[] input){
 	boolean correctPassword=true;
-	char[] password={'P','a','s','s','w','o','r','d','1','2','3','4','5'};
+	char[] password={'P','a','s','s','w','o','r','d','1'};
 	if(input.length != password.length){
 		correctPassword=false;
 	}

@@ -5,8 +5,8 @@ How to run program
 
 Buyer
 1)After double clicking the executable you are presented with a login screen
-2)It is recommended that you login to the buyer account first with the login 'buyer12345' 
-and password 'Password12345' or errors can occur when switching from seller to buyer.
+2)It is recommended that you login to the buyer account first with the login 'buyer1' 
+and password 'Password1' or errors can occur when switching from seller to buyer.
 3)On the buyer page you can click the "Add to Cart" button to add a certain product to your shopping cart.
 You can also click "More Info" to open an info box for that specific item.
 4) When done you can click the "Go To Cart" button to view the contents of you shopping cart. You can 
@@ -16,7 +16,7 @@ complete.
 5) When you are done as a buyer you can click the logout button to return to the login screen.
 
 Seller
-1)To login as a seller you must enter the username 'seller12345' and password 'Password12345'.
+1)To login as a seller you must enter the username 'seller1' and password 'Password1'.
 2)On the seller mainpage you can change the quantity of your products by making changes in the field provided and
 click edit. 
 3)To delete a product you simply click on the delete button on the products panel.
