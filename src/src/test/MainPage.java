@@ -25,6 +25,7 @@ import javax.swing.border.Border;
 /**
  * Main Class where the main page is created
  * @author Oscar Vasquez
+ * Test
  */
 public class MainPage {
 
