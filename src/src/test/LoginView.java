@@ -23,6 +23,7 @@ public class LoginView {
 	/**
 	 * Adds the different components to the panel
 	 * @param panel: Where components will be added
+	 * Test
 	 * @author Oscar Vasquez
 	 */
 private static void placeComponents(JPanel panel){
