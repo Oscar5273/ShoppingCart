@@ -64,9 +64,9 @@ private static void placeComponents(JPanel panel){
 
 		@Override
 		public void actionPerformed(ActionEvent e){
-			String url = "jdbc:mysql://localhost:3306/javabase";
-			String username = "java";
-			String password = "password";
+			String url = "jdbc:mysql://rds-mysql-10mintutorial.c2mpgzjscjnj.us-east-1.rds.amazonaws.com:3306/javabase";
+			String username = "oscar5273";
+			String password = "Server1720";
 
 			System.out.println("Connecting database...");
 			Connection con;
