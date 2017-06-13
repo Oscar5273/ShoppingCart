@@ -3,10 +3,13 @@ Oscar Vasquez
 
 How to run program
 
+
+I would recomend that you login to the buyer page or errors can occur when switching from seller to buyer. 
+
 Buyer
 1)After double clicking the executable you are presented with a login screen
-2)It is recommended that you login to the buyer account first with the login 'buyer1' 
-and password 'Password1' or errors can occur when switching from seller to buyer.
+2) You can either click on register to create  your own login by entering your information, you don't need to use yur actual address or credit card information. Or yu can also login with a premade loing with the username 'buyer1' 
+and password 'Password1' 
 3)On the buyer page you can click the "Add to Cart" button to add a certain product to your shopping cart.
 You can also click "More Info" to open an info box for that specific item.
 4) When done you can click the "Go To Cart" button to view the contents of you shopping cart. You can 
