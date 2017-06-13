@@ -9,6 +9,14 @@ public class Buyer
 	/**
 	 * Creates a new Buyer 
 	 */
+	public Buyer(String address,String creditCard)
+	{
+		this.address= address;
+		this.creditCard = creditCard;
+	}
+	/**
+	 * Creates a new Buyer 
+	 */
 	public Buyer()
 	{
 		this.address= "4980 nw 99th street, Boca Raton FL";

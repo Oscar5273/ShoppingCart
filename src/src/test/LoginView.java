@@ -88,7 +88,7 @@ private static void placeComponents(JPanel panel){
 			
 			String uname=userText.getText();
 			Statement stmt = null;
-		    String query = "select firstname,lastname,password " +
+		    String query = "select firstname,lastname,password,address,ccard " +
 	                   "from " + "javabase" + ".shoppingcart where username=\""+uname+"\"";
 	        try {
 				stmt = con.createStatement();
@@ -101,15 +101,26 @@ private static void placeComponents(JPanel panel){
 					rs.previous();
 		        while (rs.next()) {
 		            String fname = rs.getString("firstname");
-		            String lname = rs.getString("lastname");
+		            String addr=rs.getString("address");;
+  					String ccard=rs.getString("ccard");;
+  					String lname = rs.getString("lastname");
 		            pw_hash=rs.getString("password");
 		            System.out.println(fname + "\t" + lname);
 		            
-		           //if(fname==null){
-		            //	JOptionPane.showMessageDialog(null,"Incorrect username or password");
-		           // }else{
+
 		            if (BCrypt.checkpw(candidate, pw_hash)){
 		      			 System.out.println("It matches");
+		      			if(userText.getText().equals("seller123")){
+		      				MainPage f=new MainPage();
+		      				x[0]="s";
+		      				f.main(x,addr,ccard);
+		      				frame.dispose();}
+		      				else{
+		      							
+		      				MainPage f=new MainPage();
+		      				x[0]="b";
+		      				f.main(x,addr,ccard);
+		      				frame.dispose();}
 		            }else{
 		      			 System.out.println("It does not match");
 		            JOptionPane.showMessageDialog(null,"Incorrect username or password");	
@@ -126,20 +137,8 @@ private static void placeComponents(JPanel panel){
 			}
 			        
 			/*
-			if(userText.getText().equals("buyer1") && checkPassword(passwordText.getPassword())==true){
-			MainPage f=new MainPage();
-			x[0]="b";
-			f.main(x);
-			frame.dispose();}
-			else if(userText.getText().equals("seller1") && checkPassword(passwordText.getPassword())==true){
-			MainPage f=new MainPage();
-			x[0]="s";
-			f.main(x);
-			frame.dispose();}
-			else{
-
-				JOptionPane.showMessageDialog(null,"Incorrect username or password");
-			}*/
+			
+			*/
 		}};
 
 	loginButton.addActionListener(loginButtonListener);
@@ -166,24 +165,8 @@ private static void placeComponents(JPanel panel){
 
 		registerButton.addActionListener(registerButtonListener);
 }
-/**
- * Checks if user entered in correct password
- * @param input: User entered password
- * @return: Boolean true if password is correct, false if not
- * @author Oscar Vasquez
- */
-public static boolean checkPassword(char[] input){
-	boolean correctPassword=true;
-	char[] password={'P','a','s','s','w','o','r','d','1'};
-	if(input.length != password.length){
-		correctPassword=false;
-	}
-	else{
-		correctPassword=Arrays.equals(input,password);
-	}
-	
-	return correctPassword;
-}
+
+
 	
 	
 	
