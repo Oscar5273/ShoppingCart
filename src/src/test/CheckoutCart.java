@@ -58,6 +58,9 @@ public CheckoutCart(Buyer b,JFrame frame1,Seller s){
 			frame.add(b2,BorderLayout.SOUTH);
 			frame.setVisible(true);
 			frame.setSize(350, 500);
+			
+			
+			//Actionlistener for Update Button
 			b1.addActionListener(new ActionListener(){
 
 				@Override
@@ -93,6 +96,7 @@ public CheckoutCart(Buyer b,JFrame frame1,Seller s){
 				}
 				
 			});
+			//Actionlistener for Checkout Button
 			b2.addActionListener(new ActionListener(){
 
 				@Override
@@ -100,16 +104,24 @@ public CheckoutCart(Buyer b,JFrame frame1,Seller s){
 					JOptionPane.showMessageDialog(null,"Order Completed!");
 					b.cart=new ShoppingCart();
 					frame.setVisible(false);
+					frame1.repaint();
 					frame1.setVisible(true);
 				}
 				
 			});
+			//Actionlistener for Close Button
 			b3.addActionListener(new ActionListener(){
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					frame1.validate();
+					frame1.repaint();
 					frame.setVisible(false);
+					frame1.validate();
+					frame1.repaint();
 					frame1.setVisible(true);
+					frame1.validate();
+					frame1.repaint();
 				}
 				
 			});

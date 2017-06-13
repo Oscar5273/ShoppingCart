@@ -31,7 +31,7 @@ public class MainPage {
 
 	static JFrame frame;
 	static Seller s=new Seller();
-	static Buyer b=new Buyer();
+	static Buyer b;
     static Border border2=BorderFactory.createRaisedSoftBevelBorder();
     static GridLayout experimentLayout = new GridLayout(0,1);
 
@@ -96,7 +96,7 @@ public static void sellerPanelArray(JPanel panel,JPanel panel2){
     p.add(b3,BorderLayout.SOUTH);
 	panel2.add(p,BorderLayout.SOUTH);
 	/**
-	 * Sets up action listener for add to product class, repaints panel to update 
+	 * Sets up action listener for add to product class, repaints panel to update new balance
 	 * @author Oscar Vasquez
 	 */
     b3.addActionListener(new ActionListener(){
@@ -359,8 +359,7 @@ static ActionListener ButtonListener = new ActionListener(){
 		JButton source = (JButton) e.getSource();
 		if(source.getName()=="logout"){
 			LoginView n=new LoginView();
-			String [] x = new String[1];
-			n.main(x);
+			n.main(null);
 			frame.dispose();
 			}}
 	};
@@ -369,9 +368,10 @@ static ActionListener ButtonListener = new ActionListener(){
 
 	
 	
-	public static void main(String[] args){
+	public static void main(String[] args,String x,String y){
 		//args=new String[1];
 		//args[0]="b";
+		b=new Buyer(x,y);
 		if(args.length!=0) {
 		if(args[0]=="b"){
 				frame = new JFrame();
@@ -392,11 +392,13 @@ static ActionListener ButtonListener = new ActionListener(){
 		       frame.add(p,BorderLayout.CENTER);
 		       frame.add(p3,BorderLayout.WEST);
 		       frame.setSize(650,600);
+		       frame.setLocationRelativeTo(null);
 		       frame.setVisible(true);
 		       
 		}
 		else if(args[0]=="s"){
-				frame = new JFrame();
+			   frame = new JFrame();
+			   frame.setLocationRelativeTo(null);
 		       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		       GridLayout experimentLayout = new GridLayout(0,2);
 		       JPanel p=new JPanel();
